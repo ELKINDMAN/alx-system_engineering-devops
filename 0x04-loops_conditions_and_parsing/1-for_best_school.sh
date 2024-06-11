@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Bash script that displays Best School 10 times.
 
-x=10
-for x in $(seq 1 $wcount)
+for x in {1..10}
 do
 	echo "Best School"
 done
