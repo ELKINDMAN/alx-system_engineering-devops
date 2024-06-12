@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# We are writing a whopping 780 numbers of the clock
+hrcounter=0
+while [ $hrcounter -le 12 ]
+do
+    echo "Hour: $hrcounter"
+    mincounter=1
+    while [ $mincounter -le 59 ]
+    do
+        echo "$mincounter"
+        ((mincounter++))
+    done
+    ((hrcounter++))
+done
