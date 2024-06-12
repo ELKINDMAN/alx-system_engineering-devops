@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#a script that lists files in a current directory in a certain pattern in the long form
+for info in *
+do 
+	if [ -f"$info" ] && [ !-h"$info" ] && [[ "$info" != *. ]]; then
+		file=$(echo "$info" | cut -d'-' -f2-)
+		echo "$file"
+	fi
+done
