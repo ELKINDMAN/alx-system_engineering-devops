@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#script that displays numbers from 1 to 20{supersitions}
+chn="bad luck from china" #---> loop 4
+jpy="bad luck from japan" #---> loop 9
+ity="bad luck from italy" #---> loop 17
+lpct=1
+while [ $lpct -le 20 ]
+do
+	case $lpct in
+		4)
+			echo "4"
+			echo "$chn"
+			;;
+		9)
+			echo "9"
+			echo "$jpy"
+			;;
+		17)
+			echo "17"
+			echo "$ity"
+			;;
+		*)
+			echo "$lpct"
+	esac
+
+	((lpct++))
+done
