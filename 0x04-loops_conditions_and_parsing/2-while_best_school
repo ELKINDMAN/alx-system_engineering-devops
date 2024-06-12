@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#while script to display text
+min=0
+max=10
+while [ $min -lt $max ]
+do
+	echo "Best School"
+	((min++))
+done
