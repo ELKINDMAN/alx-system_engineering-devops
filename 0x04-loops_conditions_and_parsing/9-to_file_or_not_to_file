@@ -1,18 +1,19 @@
 #!/usr/bin/env bash
-#Bash script that gives you information about the school file.
+# Bash script that gives you information about the school file.
 fname="school"
 
 if [ -e "$fname" ]; then
-	echo "$fname file exists"
+    echo "$fname file exists"
 
-	if [ -s "$fname" ]; then
-		echo "$fname file is empty"
-	else
-		echo "$fname is not empty"
-	fi
-	if [ -f "$fname" ]; then 
-		echo "$fname is a regular file"
-	fi
+    if [ -s "$fname" ]; then
+        echo "$fname is not empty"
+    else
+        echo "$fname file is empty"
+    fi
+    
+    if [ -f "$fname" ]; then 
+        echo "$fname is a regular file"
+    fi
 else
-	echo "$fname does not exist"
+    echo "$fname does not exist"
 fi
