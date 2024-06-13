@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# The popular FizzBuzz code
+
+fibz=1
+while [ $fibz -le 100 ]
+do
+    if (( fibz % 3 == 0 && fibz % 5 == 0 )); then
+        echo "FizzBuzz"
+    elif (( fibz % 3 == 0 )); then
+        echo "Fizz"
+    elif (( fibz % 5 == 0 )); then
+        echo "Buzz"
+    else
+        echo "$fibz"
+    fi
+    ((fibz++))
+done
