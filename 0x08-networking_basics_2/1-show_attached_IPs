@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script prints all the IPv4 address on this device.
+ifconfig | grep 'inet adr:' | cut -d: -f2 | cut -d" " -f1
