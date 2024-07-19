@@ -1,0 +1,23 @@
+TASK 0:
+INFRASTRUCTURE DESIGN: https://drive.google.com/file/d/1pILmNTM3PPfS_GPFO9BOHWi5x_ro1RTR/view?usp=sharing
+
+1. A server is a device that hosts information/functionalities and provides it other devices/clients on a computer network.
+
+2. The domain fundamentally serves as a tag or label that is associated with the IP address.
+
+3. The DNS type is TLD(top level domain).
+
+4. Basically the web server hosts web pages for web clients.
+
+5. The application server hosts the back-end application/functionalities, mostly dynamic content.
+
+6. The database holds and allows permitted data operations.
+
+7. It uses the HTTP/HTTPS protocol.
+
+8. Infrastructure issues:
+8.1 SPOF: A Single Point of Failure means that if any component in your infrastructure fails, the entire service will go down.
+
+8.2 When you need to deploy new code or perform maintenance, the web server (Nginx) or the application server may need to be restarted, leading to downtime.
+
+8.3 The infrastructure cannot handle an increase in traffic or load because all components are hosted on a single server.
