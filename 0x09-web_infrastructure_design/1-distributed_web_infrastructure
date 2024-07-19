@@ -1,0 +1,28 @@
+TASK 1:
+INFRASTRUCTURE DESIGN: https://drive.google.com/file/d/1qnwPL-oCbcW4LnwSC3EQN79XxZg2Z2q3/view?usp=sharing
+
+Second server and load balancer: To distribute incoming traffic evenly across the web servers, ensuring no single server is overwhelmed.
+
+Distribution Algorithm: HAProxy by default is configured with a round-robin algorithm. It distributes requests sequentially to each server in the pool, for an even distribution of load.
+
+The setup uses an active-active setup: allows both servers handle requests simultaneously
+Active-passive: a single active server, and a backup server during failure.
+
+Database Primary-Replica (Master-Slave) Cluster:
+
+How it Works: The primary (master) database handles all write operations and replicates changes to one or more replicas (slaves). The replicas handle read operations.
+Primary vs. Replica:
+Primary Node: Manages all write operations and updates. It ensures data consistency and propagates changes to replicas.
+Replica Node: Receives data updates from the primary node and handles read requests, reducing the load on the primary node and improving read performance.
+
+issues with infrastructure:
+Single Points of Failure (SPOF):
+Load Balancer: If the load balancer fails, all incoming traffic is disrupted.
+
+Security Issues
+No Firewall: Without a firewall, the servers are vulnerable to unauthorized access and attacks.
+No HTTPS: Without HTTPS, data transmission between users and servers is not encrypted, making it susceptible to interception and attacks.
+
+Lack of Monitoring: Without monitoring, it's difficult to detect and respond to issues such as server failures, performance bottlenecks, and security breaches.
+
+
