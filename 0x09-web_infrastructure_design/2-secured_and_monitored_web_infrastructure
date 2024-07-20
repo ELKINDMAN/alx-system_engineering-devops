@@ -1,0 +1,32 @@
+TASK 2:
+IINFRASTRUCTURE DESIGN: https://drive.google.com/file/d/1glTtRJZUd0r06hFziHrY27bdebDBqfO5/view
+2 Servers: For redundancy and load distribution.
+
+
+1 Web Server (Nginx): To handle HTTP/HTTPS requests and serve static content.
+
+1 Application Server: To handle business logic and dynamic content.
+
+1 Load Balancer (HAProxy): To distribute incoming traffic across multiple servers.
+
+1 Set of Application Files (Your Code Base): The code base for the web application.
+
+1 Database (MySQL): To store and manage data.
+
+3 Firewalls: For network security: To protect entire network, protect web servers
+
+1 SSL Certificate: To enable HTTPS for www.foobar.com: encrypt data for ww.foobar.com
+
+3 Monitoring Clients: For collecting and sending data to a monitoring service (e.g., Sumologic). collect data from various components (e.g., logs, metrics) and send it to a centralized platform for analysis and alerting.
+
+Monitoring Web Server QPS (Queries Per Second):
+install monitoring client
+configure metrics collection
+setup dashboards and alerts
+
+----------ISSUES WITH THE INFRASTRUCTURE------------
+If SSL is terminated at the load balancer, the traffic between the load balancer and the backend servers is unencrypted. This can be a security risk, especially in environments where internal traffic can be intercepted.
+
+Issue: If the primary MySQL server fails, write operations cannot be processed, leading to data availability issues.
+
+Issue: This setup can lead to resource contention and complicate scaling. Each server handling multiple roles can cause performance bottlenecks and make it harder to manage resource allocation.
